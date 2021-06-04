@@ -110,4 +110,4 @@ if (highscore === score) {
 } else {
   console.log("Well Played !! ")
 }
-console.log("************")
+console.log("*****************")
