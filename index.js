@@ -3,7 +3,7 @@ var name = readlineSync.question("What's your name ? ");
 console.log("Welcome to F.R.I.E.N.D.S Quiz!! " + name);
 // var question,answer;
 var score = 0;
-
+var bool;
 function game(question, answer) {
   var answerOne = readlineSync.question(question)
   if (answerOne === answer) {
@@ -35,8 +35,8 @@ var levelOne = [{
   },
   {
     question: "What is Chandler'sBing Job?",
-    options: ["Transponster", "NoBody knows"],
-    answer: "NoBody knows"
+    options: ["Transponster", "Nobody knows"],
+    answer: "Nobody knows"
   },
   {
     question: "What is Chandler'sBing middle name?",
@@ -58,14 +58,16 @@ for (var i = 0; i < levelOne.length; i++) {
 // var highscore = 11;
 if (score===6) {
   console.log("Congratulations!! you hve completed levelOne !!!")
-  
-  var bool=readlineSync.question("Do you want to play next level? ");
-  if(bool==="yes"){
-    console.log("LevelTwo started !!")
-  }
-} else {
+}
+else {
   console.log("Better luck next time!!")
 }
+ 
+  if(bool==="yes"){
+     bool=readlineSync.question("Do you want to play next level? ");
+    console.log("LevelTwo started !!")
+  
+ 
 var levelTwo = [
 {
     question: "What holidays did chandler hate?",
@@ -98,6 +100,11 @@ var levelTwo = [
     answer: "Sandwiches"
   },
   ];
+  }
+  else{
+    console.log("Well Played !! Come again later :)")
+  }
+
   if(score===6){
   for (var i = 0; i < levelTwo.length; i++) {
   var res = levelTwo[i];
