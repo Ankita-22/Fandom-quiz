@@ -18,7 +18,7 @@ function game(question, answer) {
 
 console.log("*************")
 
-var questions = [{
+var levelOne = [{
     question: "How many seasons of Friends are there ?",
     options: ["10", "8", "5"],
     answer: "10",
@@ -48,26 +48,66 @@ var questions = [{
     options: ["Mary Queen", "Mary Angela"],
     answer: "Mary Angela"
   },
-  {
+  
+];
+for (var i = 0; i < levelOne.length; i++) {
+  var res = levelOne[i];
+  console.log(game(res.question, res.answer));
+
+}
+// var highscore = 11;
+if (score===6) {
+  console.log("Congratulations!! you hve completed levelOne !!!")
+  
+  var bool=readlineSync.question("Do you want to play next level? ");
+  if(bool==="yes"){
+    console.log("LevelTwo started !!")
+  }
+} else {
+  console.log("Better luck next time!!")
+}
+var levelTwo = [
+{
     question: "What holidays did chandler hate?",
     options: ["Christmas", "Thanksgiving"],
-    answer: "NoBody knows"
+    answer: "Thanksgiving"
   },
   {
     question: "How many pages was Rachel's letter to Ross?",
     options: [10, 20, 18],
     answer: 18
   },
-];
-for (var i = 0; i < questions.length; i++) {
-  var res = questions[i];
+  {
+    question: " Who introduced Phoebe and Mike?",
+    options: ["Ross","Monica","Joey"],
+    answer: "Joey"
+  },
+   {
+    question: " What food caused Ross to get sick on Space Mountain?",
+    options: ["Pizza","Tacos","Sandwich"],
+    answer: "Tacos"
+  },
+   {
+    question: " What did mail man call?",
+    options: ["Ms.ChanendlerBong","ChandlerBing"],
+    answer: "Ms.ChanendlerBong"
+  },
+  {
+    question: " What is Joeys favourite food?",
+    options: ["Pizza","Sandwiches"],
+    answer: "Sandwiches"
+  },
+  ];
+  if(score===6){
+  for (var i = 0; i < levelTwo.length; i++) {
+  var res = levelTwo[i];
   console.log(game(res.question, res.answer));
-
+  }
 }
-var highscore = 3;
+var highscore = 11;
 if (highscore === score) {
   console.log("Congratulations!! you hve the highest score !!!")
 } else {
-  console.log("All the best for your next game")
+  console.log("Well Played !! ")
 }
 console.log("************")
